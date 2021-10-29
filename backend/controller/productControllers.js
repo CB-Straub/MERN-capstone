@@ -1,6 +1,6 @@
 const Product = require('../models/Product')
 
-
+// uses model Schema 
 
 const getAllProducts = async (req, res) => {
     try {

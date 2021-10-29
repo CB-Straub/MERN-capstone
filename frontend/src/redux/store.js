@@ -7,11 +7,13 @@ import { getProductDetailsReducer, getProductsReducer } from './reducers/product
 
 const reducer = combineReducers({
     cart: cartReducer,
+    //manages state in cart 
     getProducts: getProductsReducer,
     getProductDetails: getProductDetailsReducer, 
 })
 
 const middleware = [thunk];
+//thunk a way to get dev tools 
 
 
 //maintains current cart in laocal storage on refresh

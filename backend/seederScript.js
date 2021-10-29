@@ -9,8 +9,9 @@ connectDB()
 
 const importData = async () => {
     try{
+        //clears database to ensure there is no duplicate data or wrong data
         await Product.deleteMany({})
-
+        //inserts the data from the data folder to the DB 
         await Product.insertMany(productsData)
 
         console.log('Data import Successful')
@@ -22,3 +23,6 @@ const importData = async () => {
 }
 
 importData()
+
+//feeds the product data from backend to the frontend 
+//process.exit command that stops process once completed 

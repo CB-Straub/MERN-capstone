@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const connectDB = async () => {
     try{
         await mongoose.connect(process.env.MONGO_URI, {
+            // accesses .env which acesses mongoDB
             
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -20,3 +21,6 @@ const connectDB = async () => {
 }
 
 module.exports = connectDB
+
+// configuring database with mongoose, async makes server load faster
+// dotenv loads variable through .env file
